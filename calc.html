@@ -1,0 +1,63 @@
+<html>
+<body>
+
+
+<input type="text" id="input1">
+<input type="text" id="input2">
+
+<button id="plusbutton">+</button>
+<button id="dividebutton">/</button>
+<button id="multbutton">*</button>
+<button id="subsbutton">-</button>
+
+<input type="text" id="results">
+
+
+
+<script>
+//debugger;
+
+plusbutton.addEventListener("click",function() {
+  var num1 = parseInt(document.querySelector("input#input1").value);
+  var num2 = parseInt(document.querySelector("input#input2").value);
+  var result = num1 + num2
+  results.value =  result
+
+});
+
+
+dividebutton.addEventListener("click",function() {
+  var num1 = parseInt(document.querySelector("input#input1").value);
+  var num2 = parseInt(document.querySelector("input#input2").value);
+
+  if (num1 === 0 || num2 === 0) {
+    results.value = "Lets not divdide by 0"
+  }
+  else {
+  var result = num1 / num2
+  results.value =  result
+  }
+
+});
+
+multbutton.addEventListener("click",function() {
+  var num1 = parseInt(document.querySelector("input#input1").value);
+  var num2 = parseInt(document.querySelector("input#input2").value);
+
+  var result = num1 * num2
+  results.value =  result
+
+});
+
+subsbutton.addEventListener("click",function() {
+  var num1 = parseInt(document.querySelector("input#input1").value);
+  var num2 = parseInt(document.querySelector("input#input2").value);
+
+  var result = num1 - num2
+  results.value =  result
+
+});
+
+</script>
+</body>
+</html>
